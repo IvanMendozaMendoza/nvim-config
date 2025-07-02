@@ -1,0 +1,33 @@
+# ~/.config/starship.toml
+
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+# Replace the '❯' symbol in the prompt with a heart emoji
+[character]
+success_symbol = "[➤ ](bold green)"
+error_symbol = "[✘](bold red)"
+
+# Disable the username module
+[username]
+disabled = true
+
+# Disable the hostname module
+[hostname]
+disabled = true
+
+# Customize the directory module
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+
+# Show Node.js version if detected
+[nodejs]
+format = "via [⬢ $version](bold green) "
+
+# Show Rust version if detected
+[rust]
+format = "via [🦀 $version](bold red) "
+
+[aws]
+disabled = true
