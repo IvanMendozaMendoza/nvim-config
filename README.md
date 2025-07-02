@@ -7,9 +7,11 @@ This repository contains my personal dotfiles for a fast and efficient developme
 ## 🚀 Key Components
 
 * **Editor:** Neovim (v0.10+) with Lazy.nvim for plugin management.
-* ´sudo add-apt-repository ppa:neovim-ppa/unstable -y
-sudo apt update
-sudo apt install neovim´
+  ```bash
+  sudo add-apt-repository ppa:neovim-ppa/unstable -y
+  sudo apt update
+  sudo apt install neovim
+
 * **Terminal:** WezTerm (GPU-accelerated, cross-platform).
 * **Shell:** Fish Shell (user-friendly, smart defaults).
 * **Prompt:** Starship (fast, customizable, contextual).
