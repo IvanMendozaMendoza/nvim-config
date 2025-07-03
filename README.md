@@ -40,7 +40,7 @@ Ensure these essential tools are installed on your Linux system:
 sudo apt update
 sudo apt install git curl build-essential ripgrep
 ```
-
+Nvim lsp dependency for mason-lspconfig
 ```bash
 git clone https://github.com/neovim/nvim-lspconfig ~/.config/nvim/pack/nvim/start/nvim-lspconfig
 ```
