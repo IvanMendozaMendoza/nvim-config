@@ -46,3 +46,8 @@ Nvim lsp dependency for mason-lspconfig
 ```bash
 git clone https://github.com/neovim/nvim-lspconfig ~/.config/nvim/pack/nvim/start/nvim-lspconfig
 ```
+For the debugger currently only golang needs delv
+```bash
+sudo apt-get install delve
+```
+
