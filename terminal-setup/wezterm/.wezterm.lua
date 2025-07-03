@@ -20,7 +20,7 @@ config.window_padding = {
     bottom = 15,
 }
 config.window_background_opacity = 0.80
-config.window_decorations = 'RESIZE'
+-- config.window_decorations = 'RESIZE'
 
 -- Keybindings
 config.keys = {
