@@ -48,17 +48,43 @@ return {
         "ts_ls",
         "gopls",
         "rust_analyzer",
-        "jdtls",
-        "pyright",
         "tailwindcss",
         "eslint",
         "html",
         "astro",
         "emmet_ls"
       },
+      auto_install = true,
       handlers = {
         function(server_name)
           require("lspconfig")[server_name].setup({})
+        end,
+
+        ["lua_ls"] = function()
+          require("lspconfig").lua_ls.setup({
+            settings = {
+              Lua = {
+                diagnostics = {
+                  globals = { "vim" },
+                },
+              },
+            },
+          })
+        end,
+
+        ["emmet_ls"] = function()
+          require("lspconfig").emmet_ls.setup({
+            filetypes = { 
+              "html",
+              "css",
+              "javascript",
+              "typescript",
+              "javascriptreact",
+              "typescriptreact",
+              "astro"
+            },
+            cmd = { "emmet-ls", "--stdio" },
+          })
         end,
       },
     },
