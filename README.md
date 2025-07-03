@@ -6,6 +6,7 @@ This repository contains my personal dotfiles for a fast and efficient developme
 
 ## 🚀 Key Components
 
+* Nerd font - `config.font = wezterm.font('JetBrainsMono Nerd Font Mono', { weight = 'Bold' })`
 * **Editor:** Neovim (v0.10+) with Lazy.nvim for plugin management.
   ```bash
   sudo add-apt-repository ppa:neovim-ppa/unstable -y
@@ -35,6 +36,7 @@ Follow these steps to get the environment running on your system.
 ### 1. **System Dependencies**
 
 Ensure these essential tools are installed on your Linux system:
+- languages runtime :used
 
 ```bash
 sudo apt update
@@ -44,8 +46,3 @@ Nvim lsp dependency for mason-lspconfig
 ```bash
 git clone https://github.com/neovim/nvim-lspconfig ~/.config/nvim/pack/nvim/start/nvim-lspconfig
 ```
-Some languages need manual installation for lsp
-```bash
-npm install -g emmet-ls  @tailwindcss/language-server @astrojs/language-server
-```
-
