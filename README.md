@@ -51,3 +51,9 @@ For the debugger currently only golang needs delv
 sudo apt-get install delve
 ```
 
+For neoteree 3rd/image.nvim dependency 
+```bash
+ # ubuntu system
+ sudo apt-get install imagemagick libmagickwand-dev
+```
+
