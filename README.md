@@ -44,4 +44,8 @@ Nvim lsp dependency for mason-lspconfig
 ```bash
 git clone https://github.com/neovim/nvim-lspconfig ~/.config/nvim/pack/nvim/start/nvim-lspconfig
 ```
+Some languages need manual installation for lsp
+```bash
+npm install -g emmet-ls  @tailwindcss/language-server @astrojs/language-server
+```
 
