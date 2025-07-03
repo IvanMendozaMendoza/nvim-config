@@ -39,3 +39,9 @@ Ensure these essential tools are installed on your Linux system:
 ```bash
 sudo apt update
 sudo apt install git curl build-essential ripgrep
+```
+
+```bash
+git clone https://github.com/neovim/nvim-lspconfig ~/.config/nvim/pack/nvim/start/nvim-lspconfig
+```
+
