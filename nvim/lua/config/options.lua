@@ -11,3 +11,4 @@ vim.opt.signcolumn = "yes"
 vim.opt.numberwidth = 4
 vim.opt.termguicolors = true
 vim.opt.showtabline = 7
+vim.opt.scrolloff = 17
