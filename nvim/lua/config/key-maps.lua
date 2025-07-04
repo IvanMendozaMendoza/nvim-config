@@ -21,7 +21,7 @@ keymap("t", "<C-l>", [[<Cmd>wincmd l<CR>]])
 
 -- Quit and Save
 keymap("n", "<leader>w", ":wa<CR>", opts)
-keymap("n", "<leader>Q", ":qa!<CR>", opts)
+keymap("n", "<leader>qq", ":qa!<CR>", opts)
 
 -- Buffers (S = shift)
 keymap("n", "<leader>c", ":bd!<CR>", opts)
@@ -60,3 +60,12 @@ keymap("n", "<leader>bb", "<Cmd>BufferPick<CR>", opts)
 for i = 1, 9 do
   keymap("n", "<leader>" .. i, "<Cmd>BufferGoto " .. i .. "<CR>", opts)
 end
+
+-- ----------------------
+-- Generate documentation
+-- ----------------------
+keymap("n", "<Leader>'", ":lua require('neogen').generate()<CR>", opts)
+
+-- Treesj toggle
+keymap('n', '<leader>m', require('treesj').toggle)
+

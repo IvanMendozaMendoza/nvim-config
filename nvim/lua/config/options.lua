@@ -12,3 +12,9 @@ vim.opt.numberwidth = 4
 vim.opt.termguicolors = true
 vim.opt.showtabline = 7
 vim.opt.scrolloff = 17
+
+vim.opt.cursorline = true
+vim.o.termguicolors = true
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
