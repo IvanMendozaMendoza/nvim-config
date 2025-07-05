@@ -58,7 +58,7 @@ keymap("n", "<leader>bb", "<Cmd>BufferPick<CR>", opts)
 
 -- Jump to buffer [1-9]
 for i = 1, 9 do
-  keymap("n", "<leader>" .. i, "<Cmd>BufferGoto " .. i .. "<CR>", opts)
+	keymap("n", "<leader>" .. i, "<Cmd>BufferGoto " .. i .. "<CR>", opts)
 end
 
 -- ----------------------
@@ -67,5 +67,10 @@ end
 keymap("n", "<Leader>'", ":lua require('neogen').generate()<CR>", opts)
 
 -- Treesj toggle
-keymap('n', '<leader>m', require('treesj').toggle)
+keymap("n", "<leader>m", require("treesj").toggle)
 
+-- LSP helpers
+vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
+vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)

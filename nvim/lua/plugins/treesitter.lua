@@ -1,4 +1,3 @@
--- ~/.config/nvim/lua/plugins/treesitter.lua
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -6,9 +5,9 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
+      "nvim-treesitter/nvim-treesitter-context",
     },
     opts = {
-      -- Enable highlighting, indentation, etc.
       highlight = {
         enable = true,
       },
@@ -27,7 +26,9 @@ return {
           },
         },
       },
-      -- List of languages to ensure parsers are installed for
+      context_commentstring = {
+        enable = true,
+      },
       ensure_installed = {
         "lua",
         "vim",
@@ -47,7 +48,28 @@ return {
       additional_vim_regex_highlighting = false,
     },
     config = function(_, opts)
+      -- Setup Treesitter core
       require("nvim-treesitter.configs").setup(opts)
+
+      -- Setup Treesitter Context (must be manually initialized)
+      require("treesitter-context").setup({
+        enable = true,    -- Enable the plugin
+        max_lines = 0,    -- Unlimited context lines
+        trim_scope = "outer", -- How to trim when context gets long
+        mode = "cursor",  -- "cursor" or "topline"
+        patterns = {
+          -- Define which nodes show in the context
+          default = {
+            "class",
+            "function",
+            "method",
+          },
+        },
+        zindex = 20,
+        separator = nil, -- You can set a separator line if you want
+      })
+
+      vim.cmd([[highlight TreesitterContext guibg=NONE]])
     end,
   },
 }
