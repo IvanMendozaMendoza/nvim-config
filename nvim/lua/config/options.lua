@@ -25,3 +25,4 @@ for _, mode in ipairs({ "n", "i", "v" }) do
     vim.api.nvim_set_keymap(mode, key, "<Nop>", { noremap = true })
   end
 end
+
