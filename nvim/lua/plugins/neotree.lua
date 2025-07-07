@@ -16,6 +16,13 @@ return {
 			vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
 
 			require("neo-tree").setup({
+				filesystem = {
+					filtered_items = {
+						visible = true, -- Show all files
+						hide_dotfiles = false, -- Don't hide files like .gitignore
+						hide_gitignored = false, -- Show gitignored files
+					},
+				},
 				close_if_last_window = true, -- closes Neo-tree if it's the last window
 				popup_border_style = "rounded",
 				enable_git_status = true,
