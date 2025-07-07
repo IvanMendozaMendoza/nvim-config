@@ -8,9 +8,8 @@ vim.opt.number = true
 
 -- Enable relative line numbers
 vim.opt.relativenumber = true
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 vim.opt.numberwidth = 4
 
 -- Bootstrapping Lazy package mannager
 require("config.lazy")
-
