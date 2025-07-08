@@ -20,9 +20,11 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- Disable arrow keys in insert and normal mode
-for _, mode in ipairs({'n', 'i', 'v'}) do
-  for _, key in ipairs({'<Up>', '<Down>', '<Left>', '<Right>'}) do
-    vim.api.nvim_set_keymap(mode, key, '<Nop>', { noremap = true })
-  end
+for _, mode in ipairs({ "n", "i", "v" }) do
+	for _, key in ipairs({ "<Up>", "<Down>", "<Left>", "<Right>" }) do
+		vim.api.nvim_set_keymap(mode, key, "<Nop>", { noremap = true })
+	end
 end
 
+-- auto refresh explorer
+vim.opt.autoread = true
