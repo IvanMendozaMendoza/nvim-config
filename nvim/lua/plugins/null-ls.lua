@@ -12,3 +12,4 @@ return {
     vim.keymap.set("n", "<leader>gr", vim.lsp.buf.format, {})
   end,
 }
+

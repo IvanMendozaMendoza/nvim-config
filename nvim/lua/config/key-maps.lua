@@ -1,6 +1,10 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+-- enable keyboard shortcuts
+keymap("v", "<C-c>", '"+y', opts)
+keymap("n", "<C-v>", '"+p', opts)
+
 --Navigation
 keymap("n", "n", "nzzzv")
 -- window
