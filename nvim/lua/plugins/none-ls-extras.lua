@@ -10,6 +10,7 @@ return {
 			null_ls.setup({
 				sources = {
 					require("none-ls.code_actions.eslint"),
+					require("none-ls.formatting.jq"),
 				},
 			})
 		end,
