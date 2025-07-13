@@ -39,7 +39,7 @@ keymap("t", "<C-k>", [[<Cmd>wincmd k<CR>]])
 keymap("t", "<C-l>", [[<Cmd>wincmd l<CR>]])
 
 -- Quit and Save
-keymap("n", "<leader>w", ":wa<CR>", opts)
+-- keymap("n", "<leader>w", ":wa<CR>", opts)
 
 -- Neotree
 keymap("n", "<C-n>", ":Neotree toggle<CR>", opts)
