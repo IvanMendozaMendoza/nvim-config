@@ -11,6 +11,11 @@ return {
         null_ls.builtins.diagnostics.eslint,
       },
     })
-    vim.keymap.set("n", "<leader>gr", vim.lsp.buf.format, {})
+    vim.keymap.set("n", "<leader>gr", function()
+      vim.lsp.buf.format({
+        async = false, -- ensure formatting finishes before saving
+      })
+      vim.cmd("write") -- or :w to save the file
+    end, { desc = "Format and save buffer" })
   end,
 }
