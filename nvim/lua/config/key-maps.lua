@@ -72,7 +72,7 @@ keymap("n", "<leader>bb", ":BufferPick<CR>", opts)
 
 -- Jump to buffer [1-9]
 for i = 1, 9 do
-	keymap("n", "<leader>" .. i, ":BufferGoto " .. i .. "<CR>", opts)
+  keymap("n", "<leader>" .. i, ":BufferGoto " .. i .. "<CR>", opts)
 end
 
 -- ----------------------
@@ -85,7 +85,7 @@ keymap("n", "<leader>m", require("treesj").toggle)
 
 -- LSP helpers
 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+vim.keymap.set("n", "go", vim.lsp.buf.definition, opts)
 vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
 vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
 
@@ -101,5 +101,5 @@ keymap("v", "<leader>zt", ":CopilotChatTests<CR>", { desc = "Generate Tests" })
 keymap("n", "<leader>zm", ":CopilotChatCommit<CR>", { desc = "Generate Commit Message" })
 keymap("v", "<leader>zs", ":CopilotChatCommit<CR>", { desc = "Generate Commit for Selection" })
 vim.keymap.set("v", "<leader>zn", function()
-	require("CopilotChat").ask("Rename")
+  require("CopilotChat").ask("Rename")
 end, { desc = "Copilot Chat: Rename Variable" })

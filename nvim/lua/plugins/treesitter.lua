@@ -31,6 +31,7 @@ return {
       },
       ensure_installed = {
         "lua",
+        "yaml",
         "vim",
         "vimdoc",
         "html",

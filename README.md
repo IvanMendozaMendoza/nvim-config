@@ -56,4 +56,10 @@ For neoteree 3rd/image.nvim dependency
  # ubuntu system
  sudo apt-get install imagemagick libmagickwand-dev
 ```
+btw included the lsp for:
+yaml files
+sql files
+
+download them from os
+
 
